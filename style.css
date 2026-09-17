@@ -238,15 +238,10 @@ section {
 
 
 .hero-description {
-
     max-width: 560px;
-
     font-size: 18px;
-
     line-height: 1.6;
-
     color: var(--muted);
-
     margin-bottom: 40px;
 
 }
