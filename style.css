@@ -244,6 +244,14 @@ justify-content: left;
     font-weight: 500;
 }
 
+.hero-text p {
+    color: var(--muted);
+}
+
+.hero-text b {
+    color: var(--text);
+}
+
 
 .hero h1 {
 
@@ -427,6 +435,14 @@ justify-content: left;
 
 }
 
+.section-heading h2:before {
+    position: relative;
+    content: "■";
+    padding-right: 12px;
+    color: var(--accent);
+    bottom: 4px;
+}
+
 
 /* =========================================
    PROJECTS
@@ -455,7 +471,7 @@ justify-content: left;
 }
 
 .categories-txt {
-    color: black;
+    color: var(--text);
     border: 1px solid lightgray;
     padding: 8px 16px;
     border-radius: 12px;
@@ -505,8 +521,9 @@ justify-content: left;
     display: block;
 
     width: 100%;
-
-    height: 650px;
+    height: 100%;
+    aspect-ratio: 1.5;
+    height: 100%;
 
     overflow: hidden;
 
@@ -669,40 +686,19 @@ justify-content: left;
 ========================================= */
 
 .skill-list {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
-
 }
 
 
 .skill-list span {
-
     border:
         1px solid var(--border);
 
     padding: 14px 20px;
-
     font-size: 14px;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
-
 }
-
-
-.skill-list span:hover {
-
-    background: var(--text);
-
-    color: white;
-
-}
-
 
 /* =========================================
    CONTACT
@@ -807,11 +803,11 @@ footer div {
     }
 
 
-    .project-image {
+    /* .project-image {
 
         height: 500px;
 
-    }
+    } */
 
 
     .about {
@@ -838,7 +834,7 @@ footer div {
     section {
 
         padding:
-            80px 20px;
+            48px 20px;
 
     }
 
@@ -880,11 +876,13 @@ footer div {
 
     .hero {
 
-        min-height: 75vh;
+        min-height: 50vh;
 
-        padding-top: 50px;
+        padding-top: 48px;
 
-        padding-bottom: 60px;
+        padding-bottom: 0;
+
+        align-items: start;
 
     }
 
@@ -935,9 +933,6 @@ footer div {
 
     .section-heading h2 {
 
-        font-size:
-            clamp(38px, 11vw, 55px);
-
         line-height: 0.95;
 
     }
@@ -970,11 +965,11 @@ footer div {
     }
 
 
-    .project-image {
+    /* .project-image {
 
         height: 400px;
 
-    }
+    } */
 
 
     /*
@@ -1022,6 +1017,15 @@ footer div {
 
     }
 
+    .project-link-container {
+    align-items: start;
+    flex-direction: column;
+}
+
+
+.categories-txt {
+    padding: 8px 12px;
+}
 
     /* ABOUT */
 
@@ -1131,11 +1135,11 @@ footer div {
     }
 
 
-    .project-image {
+    /* .project-image {
 
         height: 330px;
 
-    }
+    } */
 
 }
 
