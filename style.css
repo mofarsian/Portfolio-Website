@@ -768,6 +768,17 @@ footer div {
 
 }
 
+footer a {
+    fill: var(--muted);
+    transition:
+    fill 0.3s ease,
+    transform 0.3s ease;
+}
+
+footer a:hover {
+    fill: var(--accent);
+    transform: translateY(-3px);
+}
 
 /* =========================================
    TABLET
@@ -1096,8 +1107,6 @@ footer div {
 
         padding:
             25px 20px;
-
-        flex-direction: column;
 
         gap: 15px;
 
