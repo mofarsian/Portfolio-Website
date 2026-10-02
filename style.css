@@ -114,6 +114,39 @@ section {
 
 }
 
+.diagram {
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+li {
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+li:before {
+    content: "■";
+    color: var(--accent);
+    bottom: 2px;
+    position: relative;
+    padding-right: 12px;
+}
+
+.imp-txt {
+    font-weight: 500;
+    color: var(--text)!important;
+    display: flex;
+    gap: 16px;
+}
+
+.imp-txt::before {
+    content: url(Images/bulb.svg);
+}
+
 
 /* =========================================
    NAVIGATION
@@ -242,10 +275,12 @@ justify-content: left;
     font-size:
         clamp(36px, 2vw, 64px);
     font-weight: 500;
+    cursor: default;
 }
 
 .hero-text p {
     color: var(--muted);
+    padding-bottom: 48px;
 }
 
 .hero-text b {
@@ -285,8 +320,8 @@ justify-content: left;
 .hero-sub {
     display: flex;
     gap: 24px;
-    padding-top: 48px;
-    justify-content: normal;
+    padding-top: 16px;
+    justify-content: start;
 }
 
 .hero-sub a {
@@ -299,6 +334,11 @@ justify-content: left;
     transition:
     color 0.3s ease,
     transform 0.3s ease;
+}
+
+.hero-sub a:first-child {
+    border-right: 1px solid var(--border);
+    padding-right: 24px;
 }
 
 .hero-sub a:hover {
@@ -522,7 +562,7 @@ justify-content: left;
 
     width: 100%;
     height: 100%;
-    aspect-ratio: 1.5;
+    aspect-ratio: 1.333;
     height: 100%;
 
     overflow: hidden;
@@ -649,6 +689,33 @@ justify-content: left;
 
 }
 
+.rafiji.palette-parent {
+    margin-bottom: 48px;
+}
+
+.palette-colors {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rafiji.palette-parent .palette-colors:first-child {
+    background-color: #DD9734;
+    padding: 36px;
+    border-radius: 12px 12px 0 0;
+}
+
+.rafiji.palette-parent .palette-colors:nth-child(2) {
+    background-color: #024666;
+    padding: 36px;
+    border-radius: 0;
+}
+
+.rafiji.palette-parent .palette-colors:last-child {
+    background-color: #FCFCFC;
+    padding: 36px;
+    border-radius: 0 0 12px 12px;
+    color: #000;
+}
 
 /* =========================================
    ABOUT
@@ -1182,8 +1249,6 @@ footer a:hover {
 
     line-height: 0.9;
 
-    letter-spacing: -0.065em;
-
     margin-bottom: 40px;
 
 }
@@ -1323,8 +1388,6 @@ footer a:hover {
 
     line-height: 1;
 
-    letter-spacing: -0.045em;
-
     margin-bottom: 40px;
 
 }
@@ -1338,7 +1401,7 @@ footer a:hover {
 
     color: var(--muted);
 
-    margin-bottom: 25px;
+    margin-bottom: 48px;
 
 }
 
@@ -1409,25 +1472,14 @@ footer a:hover {
 .case-placeholder {
 
     width: 100%;
-
     height: 400px;
-
     margin-top: 50px;
-
-    background: #deded9;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-size: 12px;
-
     letter-spacing: 0.15em;
-
     color: #777;
-
 }
 
 
@@ -1447,6 +1499,8 @@ footer a:hover {
     width: 100%;
 
     display: block;
+
+    border-radius: 12px;
 
 }
 

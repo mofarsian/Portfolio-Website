@@ -12,6 +12,21 @@
 
     <title>Mo. Farsian — UI/UX Designer</title>
 
+    <script>
+  const savedTheme = localStorage.getItem("theme");
+
+  const systemPrefersDark =
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const theme = savedTheme ||
+    (systemPrefersDark ? "dark" : "light");
+
+  document.documentElement.setAttribute(
+    "data-theme",
+    theme
+  );
+</script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="Images/favicons/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="Images/favicons/favicon-16x16.png">
@@ -105,7 +120,6 @@
                         Linkedin
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Pixelarticons by Gerrit Halfmann - https://github.com/halfmage/pixelarticons/blob/master/LICENSE --><g fill="currentColor"><path d="M11 5H5v2h6zM5 7H3v12h2zm12 12H5v2h12zm2-6h-2v6h2zm-8 0H9v2h2zm2-2h-2v2h2zm2-2h-2v2h2zm2-2h-2v2h2zm2-2h-2v2h2zm2-2h-2v8h2z"/><path d="M21 3h-8v2h8z"/></g></svg>
                     </a>
-                    <span class="sub-divider">|</span>
                     <a href="email">
                         Email
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Pixelarticons by Gerrit Halfmann - https://github.com/halfmage/pixelarticons/blob/master/LICENSE --><path fill="currentColor" d="M6 8h2v2H6zm2 2h2v2H8zm10-2h-2v2h2zm-2 2h-2v2h2zm-6 2h4v2h-4zM2 6h2v12H2zm18 0h2v12h-2zM4 4h16v2H4zm0 14h16v2H4z"/></svg>
@@ -144,7 +158,7 @@
                     >
 
                         <img
-                            src="./Images/rafiji/rafiji-01.png"
+                            src="./Images/rafiji/rafiji-thumbnail.webp"
                             alt="Project One UI/UX design"
                         >
 
@@ -155,7 +169,7 @@
 
                             <span class="project-link-container">
                             <h3>
-                                Rafiji
+                                <a href="project-01.html">Rafiji</a>
                             </h3>  
                             
                             <span class="project-categories">
@@ -182,7 +196,7 @@
                     >
 
                         <img
-                            src="./Images/anastasia/ana-01.png"
+                            src="./Images/anastasia/ana-thumbnail.webp"
                             alt="Project Two UI/UX design"
                         >
 
@@ -193,7 +207,7 @@
 
                             <span class="project-link-container">
                             <h3>
-                                Anastasia
+                                <a href="project-02.html">Anastasia</a>
                             </h3>  
                             
                             <span class="project-categories">
@@ -219,7 +233,7 @@
                     >
 
                         <img
-                            src="./Images/medilink/med-01.png"
+                            src="./Images/medilink/medilink-thumbnail.webp"
                             alt="Project Two UI/UX design"
                         >
 
@@ -230,7 +244,7 @@
 
                             <span class="project-link-container">
                             <h3>
-                                Medilink
+                                <a href="project-03.html">Medilink</a>
                             </h3>  
                             
                             <span class="project-categories">
@@ -255,7 +269,7 @@
                     >
 
                         <img
-                            src="./Images/tripletouch/tt-01.png"
+                            src="./Images/tripletouch/tt-thumbnail.webp"
                             alt="Project Two UI/UX design"
                         >
 
@@ -266,7 +280,7 @@
 
                             <span class="project-link-container">
                             <h3>
-                                Triple Touch
+                                <a href="project-04.html">Triple Touch</a>
                             </h3>  
                             
                             <span class="project-categories">

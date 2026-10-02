@@ -53,18 +53,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* ========================================
-   NIGHT MODE
+   THEME
 ======================================== */
 
 const themeToggle = document.getElementById("theme-toggle");
 
 const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme) {
-  document.documentElement.setAttribute("data-theme", savedTheme);
-} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  document.documentElement.setAttribute("data-theme", "dark");
-}
+const systemPrefersDark = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+
+// Use saved preference if available.
+// Otherwise use the user's system preference.
+const initialTheme = savedTheme
+  ? savedTheme
+  : systemPrefersDark
+    ? "dark"
+    : "light";
+
+document.documentElement.setAttribute(
+  "data-theme",
+  initialTheme
+);
 
 updateThemeButton();
 
@@ -73,14 +84,20 @@ themeToggle.addEventListener("click", () => {
     document.documentElement.getAttribute("data-theme");
 
   const newTheme =
-    currentTheme === "dark" ? "light" : "dark";
+    currentTheme === "dark"
+      ? "light"
+      : "dark";
 
-  document.documentElement.setAttribute("data-theme", newTheme);
+  document.documentElement.setAttribute(
+    "data-theme",
+    newTheme
+  );
 
   localStorage.setItem("theme", newTheme);
 
   updateThemeButton();
 });
+
 
 function updateThemeButton() {
   const isDark =
