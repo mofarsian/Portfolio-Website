@@ -1515,6 +1515,10 @@ footer a:hover {
 
 }
 
+.final-product.case-image img {
+    max-height: 100%;
+}
+
 
 /* =========================================
    NEXT PROJECT
