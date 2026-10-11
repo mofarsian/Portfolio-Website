@@ -137,7 +137,7 @@ ul {
 
 li {
     font-size: 19px;
-    line-height: 1.7;
+    margin-bottom: 16px;
 }
 
 li:before {
@@ -701,13 +701,33 @@ justify-content: left;
 
 }
 
-.rafiji.palette-parent {
+.rafiji.palette-parent, .anastasia.palette-parent {
     margin-bottom: 48px;
 }
 
 .palette-colors {
     display: flex;
     justify-content: space-between;
+}
+
+.anastasia.palette-parent .palette-colors:first-child {
+    background-color: #0e2f65;
+    padding: 36px;
+    border-radius: 12px 12px 0 0;
+}
+
+.anastasia.palette-parent .palette-colors:nth-child(2) {
+    background-color: #fae3df;
+    padding: 36px;
+    border-radius: 0;
+    color: #000;
+}
+
+.anastasia.palette-parent .palette-colors:last-child {
+    background-color: #fff;
+    padding: 36px;
+    border-radius: 0 0 12px 12px;
+    color: #000;
 }
 
 .rafiji.palette-parent .palette-colors:first-child {
